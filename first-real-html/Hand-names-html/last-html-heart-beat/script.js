@@ -1,5 +1,3 @@
-// script.js
-
 let heartbeatInterval;
 
 // Function to start the heartbeat and vibration effect
@@ -9,11 +7,18 @@ function startHeartbeat() {
     heartbeatInterval = setInterval(() => {
         navigator.vibrate(vibrationPattern);
     }, 1000);
+
+    // Enable stop vibration button when vibration starts
+    document.getElementById('stopVibrationButton').disabled = false;
 }
 
 // Function to stop the heartbeat and vibration effect
 function stopHeartbeat() {
     clearInterval(heartbeatInterval);
+    navigator.vibrate(0); // Stop any ongoing vibration
+
+    // Disable stop vibration button after vibration stops
+    document.getElementById('stopVibrationButton').disabled = true;
 }
 
 // Format time to mm:ss
@@ -23,15 +28,14 @@ function formatTime(seconds) {
     return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
 }
 
-// Handle audio playback
+// Handle audio playback (independent of heartbeat)
 const audio = document.getElementById('audio');
 const playButton = document.getElementById('playButton');
 
 playButton.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
-        playButton.innerText = '⏸️ Pause '; // Change button text to "Pause"
-        startHeartbeat(); // Start heartbeat when audio plays
+        playButton.innerText = '⏸️ Pause'; // Change button text to "Pause"
 
         // Update time every 250 milliseconds for smoother transition
         const duration = audio.duration; // Get the duration of the audio
@@ -50,7 +54,6 @@ playButton.addEventListener('click', () => {
 
         // Reset button text when audio ends
         audio.addEventListener('ended', function () {
-            stopHeartbeat(); // Stop the heartbeat when audio ends
             clearInterval(timerInterval); // Stop the timer
             document.getElementById('timeLeft').innerText = "0:00"; // Reset display
             document.getElementById('timeRight').innerText = "0:00"; // Reset display
@@ -60,7 +63,6 @@ playButton.addEventListener('click', () => {
     } else {
         audio.pause();
         playButton.innerText = '▶️ Resume Again Bachi'; // Change button text to "Resume"
-        stopHeartbeat(); // Stop heartbeat when audio is paused
     }
 });
 
