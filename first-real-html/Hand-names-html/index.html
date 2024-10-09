@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Alternator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="image-container">
+        <img id="image1" src="real.png" alt="Image 1">
+        <img id="image2" src="animation.png" alt="Image 2">
+    </div>
+
+    <!-- Dynamic LaVi Text with Emojis -->
+    <div class="lavi-container">
+        <span class="lavi">L</span>
+        <span class="lavi">a</span>
+        <span class="lavi">V</span>
+        <span class="lavi">i</span>
+        <span class="emoji">💖</span>
+        <span class="emoji">✨</span>
+        <span class="emoji">💫</span>
+    </div>
+
+    <!-- Audio Player Section -->
+    <audio id="audioMessage" src="audio.mp4"></audio>
+
+    <!-- Play/Pause Button with Icon and Text -->
+    <button class="audio-button" id="audioControlBtn" onclick="toggleAudio()">
+        ▶️ Play
+    </button>
+
+    <!-- Progress Bar with Girl and Boy Icons -->
+    <div class="progress-bar">
+        <div class="girl-icon">👧🏻</div>
+        <div class="progress-line"></div>
+        <div class="boy-icon">👦🏻</div>
+    </div>
+
+    <!-- Go to Next Page Button -->
+    <button class="open-button" onclick="openNewPage()">Go to Next Page</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

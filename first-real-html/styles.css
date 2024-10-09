@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ffd1dc, #ffefba);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #fcefe3;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333333;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.landing {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.landing-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.i-love-you-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Add space between text items */
+    font-size: 1.2rem;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.i-love-you-text span {
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+}
+
+/* Color variety for "I love you" text */
+.i-love-you-text span:nth-child(1) { color: #FF6347; }  /* Tomato */
+.i-love-you-text span:nth-child(2) { color: #FFD700; }  /* Gold */
+.i-love-you-text span:nth-child(3) { color: #00FA9A; }  /* Medium Spring Green */
+.i-love-you-text span:nth-child(4) { color: #FF69B4; }  /* Hot Pink */
+.i-love-you-text span:nth-child(5) { color: #7B68EE; }  /* Medium Slate Blue */
+.i-love-you-text span:nth-child(6) { color: #FF4500; }  /* Orange Red */
+.i-love-you-text span:nth-child(7) { color: #32CD32; }  /* Lime Green */
+.i-love-you-text span:nth-child(8) { color: #FF1493; }  /* Deep Pink */
+.i-love-you-text span:nth-child(9) { color: #20B2AA; }  /* Light Sea Green */
+.i-love-you-text span:nth-child(10) { color: #FFD700; } /* Gold */
+.i-love-you-text span:nth-child(11) { color: #8A2BE2; } /* Blue Violet */
+.i-love-you-text span:nth-child(12) { color: #FF6347; } /* Tomato */
+.i-love-you-text span:nth-child(13) { color: #00BFFF; } /* Deep Sky Blue */
+.i-love-you-text span:nth-child(14) { color: #DB7093; } /* Pale Violet Red */
+.i-love-you-text span:nth-child(15) { color: #FF4500; } /* Orange Red */
+.i-love-you-text span:nth-child(16) { color: #32CD32; } /* Lime Green */
+.i-love-you-text span:nth-child(17) { color: #FF1493; } /* Deep Pink */
+.i-love-you-text span:nth-child(18) { color: #20B2AA; } /* Light Sea Green */
+.i-love-you-text span:nth-child(19) { color: #FFD700; } /* Gold */
+.i-love-you-text span:nth-child(20) { color: #8A2BE2; } /* Blue Violet */
+.i-love-you-text span:nth-child(21) { color: #DB7093; } /* Pale Violet Red */
+
+.text-box {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-left: 20px;
+}
+
+button {
+    padding: 15px 45px;
+    background: linear-gradient(135deg, #ff9966, #ff5e62); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease; /* Smooth transition for hover effect */
+    letter-spacing: 1px; /* Slight letter spacing */
+    text-transform: uppercase; /* Makes the text all uppercase */
+}
+
+/* Hover effect */
+button:hover {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* Gradient changes on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Adds a lifting effect */
+}
+
+/* Active state effect */
+button:active {
+    background: linear-gradient(135deg, #ff5e62, #ff9966);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px); /* Slight push-down effect when clicked */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .landing {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .landing-image,
+    .text-box {
+        width: 100%;
+        margin: 0;
+    }
+
+    .text-box {
+        margin-top: 20px;
+    }
+}
+
+/* For the exit animation */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+
+/* Other styles remain unchanged... */
+
+/* For enlarging the text */
+.enlarge {
+    transform: scale(3); /* Increase size to 300% */
+    transition: transform 3s ease; /* Smooth transition */
+    position: fixed; /* Positioning the text in the center */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the text */
+    z-index: 10; /* Bring it to the front */
+}
+
+/* For the exit animation */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+
+/* Extra styles for "I love you" text on click */
+.i-love-you-text.enlarge {
+    font-size: 5rem; /* Make it larger */
+    color: #FF1493; /* Bright pink color */
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.6), /* Dark shadow for depth */
+        0 0 25px rgba(255, 20, 147, 0.7), /* Pink glow */
+        0 0 5px rgba(255, 20, 147, 0.7); /* Additional glow */
+    animation: pulse 2s infinite; /* Animation for pulsating effect */
+    position: fixed; /* Position in the center */
+    top: 50%; /* Centering */
+    left: 50%; /* Centering */
+    transform: translate(-50%, -50%); /* Centering the text */
+    z-index: 100; /* Bring it to the front */
+}
+
+/* Keyframes for pulsating effect */
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1); /* Normal size */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1); /* Slightly larger */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1); /* Back to normal */
+    }
+}

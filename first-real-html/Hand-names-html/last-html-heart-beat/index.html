@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Heart Beat with Clouds</title>
+</head>
+<body>
+    <div class="heart-container">
+        <div class="heart"></div>
+    </div>
+    
+    <div class="container">
+        <div class="center-image">
+            <img src="image1.png" alt="Center Image">
+        </div>
+    </div>
+    
+    <div class="audio-player">
+        <button id="playButton">▶️ Words for you (play)</button>
+    </div>
+
+    <div class="progress-container">
+        <div class="time-left" id="timeLeft">0:00</div>
+        <div class="boy-icon">👦🏻</div>
+        <div class="progress-line"></div>
+        <div class="girl-icon">👧🏻</div>
+        <div class="time-right" id="timeRight">0:00</div>
+    </div>
+
+    <div class="vibration-buttons">
+        <button id="vibrationButton">💓 listen My Hearbeat</button>
+        <button id="stopVibrationButton" disabled>🛑 Stop vibration</button>
+    </div>
+
+    <!-- Clouds Section -->
+    <div class="clouds">
+        <div class="left-clouds">
+            <div class="cloud" id="cloud1">🌥 I love you always & Forever. 🌥</div>
+            <div class="cloud" id="cloud2">☁️ You are my angel.............. ☁️</div>
+            <div class="cloud" id="cloud3">🌦 Smile please....... 🌦</div>
+        </div>
+        <div class="right-clouds">
+            <div class="cloud" id="cloud4">🌥 Be my Bachi Forever. 🌥</div>
+            <div class="cloud" id="cloud5">☁️ .....Happy Birthday my Lucky Charm ☁️</div>
+            <div class="cloud" id="cloud6">🌦.............. I love you 3000 🌦</div>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="audio" src="message.mp4"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

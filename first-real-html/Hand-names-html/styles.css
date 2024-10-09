@@ -1,0 +1,175 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+}
+
+.image-container {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: #fff;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    border-radius: 20px;
+}
+
+#image1 {
+    opacity: 1;
+}
+
+/* Dynamic LaVi and Emoji Animation */
+.lavi-container {
+    margin: 30px 0;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.lavi {
+    font-family: 'Dancing Script', cursive;
+    color: #ff69b4;
+    animation: float 2s ease-in-out infinite;
+}
+
+.emoji {
+    font-size: 40px;
+    animation: emojiFloat 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes emojiFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Play/Pause Button Styling */
+.audio-button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(255, 112, 112, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.audio-button:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(to right, #e94057, #8a2387);
+}
+
+.audio-button:active {
+    transform: translateY(1px);
+}
+
+/* Progress Bar with Girl and Boy Icons */
+.progress-bar {
+    position: relative;
+    width: 400px; /* Extended length for smoother movement */
+    height: 40px; /* Height increased for better visuals */
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.girl-icon {
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    top: 5px; /* Position slightly above the line */
+    z-index: 2; /* Ensure the girl is in front of the line */
+    transition: left 0.1s linear;
+}
+
+.boy-icon {
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    top: 5px; /* Align with the girl */
+    z-index: 2; /* Ensure the boy is also in front of the line */
+}
+
+.progress-line {
+    width: 100%;
+    height: 4px;
+    background: lightgray;
+    border-radius: 2px;
+    position: absolute;
+    top: 15px; /* Position the line above the icons */
+    z-index: 1; /* Ensure line is behind the icons */
+}
+
+.open-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.open-button:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(to right, #5b00c2, #1d65e6);
+}
+
+.open-button:active {
+    transform: translateY(1px);
+}
